@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Jugando</title>
+</head>
+<header>
+    <img src="images/Logo.png" alt="A">
+    
+    <div class="imagenahorcado">  
+        <div id="invi1" class="invisible"> <img src="images/horca1.png" alt="horca1"></div>
+        <div id="invi2" class="invisible"> <img src="images/horca2.png" alt="horca2"></div>
+        <div id="invi3" class="invisible"> <img src="images/horca3.png" alt="horca3"></div>
+        <div id="invi4" class="invisible"> <img src="images/horca4.png" alt="horca4"></div>
+        <div id="invi5" class="invisible"> <img src="images/horca5.png" alt="horca5"></div>
+        <div id="invi6" class="invisible"> <img src="images/horca6Fin.png" alt="horca6"></div>
+        <div id="ganastediv" class="invisible"><img id="ganaste" src="images/youwin.jpg" alt="ganaste"> </div>
+    </div>
+    
+    </header>
+<body>
+    <div class="hinput">
+        <div><input type="text" id="letra" class="input" placeholder="Letras"></div> 
+        <div id="frase"></div> 
+        <div id="vida">Tienes 5 intentos</div>
+        <div id="cuadrorojo" class="invisible"><input type="text" id="letraInco" class="input" placeholder="- - - - - - - - -"></div>    
+    </div>
+    
+    <div class="botoneras" >
+        <div><button type="button" id="btnnj" class="btn btn-primary">Nuevo juego</button></div>
+        <div><button type="button" id="btnd" class="btn btn-secondary">Desistir</button></div>
+    </div>
+</body>
+<script src="/js/jugando/jugando.js"></script>
+<script src="js/jugando/reiniciar.js"></script>
+<script src="js/jugando/validarletras.js"></script>
+<script src="/js/jugando/aparecermuneco.js"></script>
+
+</html>

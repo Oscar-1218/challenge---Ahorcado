@@ -1,0 +1,129 @@
+*{
+    background-color: rgb(168, 168, 167);
+    
+}
+img{
+    margin-top: 1em;
+}
+
+
+button{
+    display: flex;
+    width: 300px;
+    height: 70px;
+}
+#btn1, #btn2, #btngye, #btnc, #btnd, #btnnj, #btngpalabra{ 
+    font-size: larger;
+    color: rgb(32, 32, 32);
+    font-weight: 600;
+}
+.hinput{
+    display: flex;
+    flex-direction: column;
+}
+.hinput div{
+    display: flex;
+    justify-content: center;
+    
+}
+h2{
+    text-align: center;
+    
+}
+#h2{
+    margin: 1em;
+} 
+
+.input{
+    border-radius: 5px;
+    width: 5em;
+    font-size: 40px;
+    line-height: normal; 
+    outline: none; /* quita el borde blanco al seleccionar*/   
+}
+input::placeholder{
+    font-weight: 700;
+}
+
+
+#advertencia{
+    display: flex;
+    justify-content: center;
+}
+#signoexclamacion{
+    margin: 4px 4px 0 0;
+}
+.botoneras{
+    display: flex;
+    background-color: rgb(168, 167, 167);
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.botoneras div{
+    display: flex;
+    margin: 10px;
+}
+
+#espaciosdisponiblesinvi{  /*Invisible hasta comenzar a escribir palabra*/
+    display: none;
+}
+header div, .imagenahorcado{
+    display: flex;
+    justify-content: center;
+}
+
+
+#invi1, #invi2, #invi2, #invi3, #invi4, #invi5, #invi6{
+    clip-path: inset(0 200px 0 0);
+}
+#ganaste{
+    border-radius: 8px;
+    width: 70%;
+    margin: 1em;
+}
+
+
+.invisible{
+     display: none;      /* HACE EL INVISIBLE */
+    
+}
+@media (max-width: 650px ){
+    .botoneras button {
+width: 150px;
+
+}
+}
+@media (max-width: 650px ){
+    #imggif {
+width: 350px;
+    }
+}
+#imggif{
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 950px ){
+        #tresbotones button {
+    width: 150px;
+    }
+}
+
+#letra, #outputincorrecto{
+    letter-spacing: 15px;
+}
+#frase{
+     font-weight: bolder;
+     font-size: xx-large;
+     color: rgb(20, 20, 20);
+}
+
+#vida{
+    font-size: medium;
+    font-weight: 600;
+}
+
+#letraInco{
+    background-color: rgb(150, 82, 82);
+}
