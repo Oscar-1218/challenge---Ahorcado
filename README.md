@@ -2,3 +2,4 @@
 Consiste en hacer el juego del ahorcado, con palabras preestablecidas mas la posibilidad de agregar otras. 
 No deve admitir palabras minusculas ni acentos. 
 Contiene html, css y js.
+/-/ Aun está en etapa de desarrollo /-/
