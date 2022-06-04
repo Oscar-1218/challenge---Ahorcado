@@ -1,5 +1,5 @@
 btnc.addEventListener("click",function(){
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://oscar-1218.github.io/challenge---Ahorcado/';
 })
 
 var almacenpalabras= ['cpu','css', 'html', 'javascript', 'python', 'java'];
@@ -7,7 +7,6 @@ vacioYfocus();
 
 
 //transporta las palabras guardadas a "Jugando.js"
-
 function palabrasGuardadas(){
     
 }
@@ -31,7 +30,7 @@ function vacioYfocus(){
     }
     console.log(almacenpalabras+ ' guardar y comenzar a jugar');
     palabrasGuardadas();
-   //window.location.href = 'http://127.0.0.1:5500/jugando.html';  //Me dirige a Jugar
+    window.location.href = 'https://oscar-1218.github.io/challenge---Ahorcado/jugando.html';  //Me dirige a Jugar
 })
 
 function caracteresMax(input){
