@@ -1,13 +1,14 @@
 //Validacion de letras ingresadas
-function ejecutaAlerta() {   
+function ejecutaAlerta(valor) {   
     var w = window.open('','','width=250,height=150')
     w.document.write(valor);
     w.focus()
-    setTimeout(function() {w.close();}, 2000)
+    setTimeout(function() {w.close();}, 1000)
     }
-
-function validarletras (letra){
-
+    
+    function validarletras (letra){
+        
+    let simbolos = /[°|!"#$%&/()=?'¡]/g;
     let mayus = /[A-Z]/g;
     let acentos = /[óáéúí]/g;
     let numero = /[0123456789]/g;    
@@ -20,7 +21,11 @@ function validarletras (letra){
             return false;
         }
     }
-    
+    if(letra.match(simbolos)){
+        valor = 'Por favor, no simbolos';
+        ejecutaAlerta(valor);
+        return false;
+    }
     if(letra.match(numero)){
         valor = "Por favor, no numeros";
         ejecutaAlerta(valor); 
