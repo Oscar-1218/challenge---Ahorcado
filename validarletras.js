@@ -1,12 +1,6 @@
 //Validacion de letras ingresadas
-function ejecutaAlerta(valor) {   
-    var w = window.open('','','width=250,height=150')
-    w.document.write(valor);
-    w.focus()
-    setTimeout(function() {w.close();}, 1000)
-    }
-    
-    function validarletras (letra){
+
+function validarletras (letra){
         
     let simbolos = /[°|!"#$%&/()=?'¡]/g;
     let mayus = /[A-Z]/g;
@@ -16,29 +10,24 @@ function ejecutaAlerta(valor) {
     console.log('letrasRepetidas=> array3= '+ array3)
     for(var i = 0; i < array3.length; i++){
         if(letra == array3[i]){
-            valor = 'Caracter repetido';
-            ejecutaAlerta(valor);       
+            alert('Caracter repetido');  
             return false;
         }
     }
     if(letra.match(simbolos)){
-        valor = 'Por favor, no simbolos';
-        ejecutaAlerta(valor);
+        alert('Por favor, no simbolos');
         return false;
     }
     if(letra.match(numero)){
-        valor = "Por favor, no numeros";
-        ejecutaAlerta(valor); 
+        alert("Por favor, no numeros"); 
         return false;
     }
     if(letra.match(mayus)){
-        valor = "Por favor, no mayusculas";
-        ejecutaAlerta(valor); 
+        alert("Por favor, no mayusculas");
         return false;
     }
     if (letra.match(acentos)){
-        valor = "Por favor, sin acentos";
-        ejecutaAlerta(valor); 
+        alert("Por favor, sin acentos"); 
         return false;
     }
     else{

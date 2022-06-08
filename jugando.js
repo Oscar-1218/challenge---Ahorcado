@@ -1,14 +1,13 @@
 btnd.addEventListener("click",function(){
-    // window.location.href = 'https://oscar-1218.github.io/challenge---Ahorcado/';
-    window.location.href = 'http://127.0.0.1:5500/index.html';
+    window.location.href = 'https://oscar-1218.github.io/challenge---Ahorcado/';
+    //window.location.href = 'http://127.0.0.1:5500/index.html';
 })
 
 btnnj.addEventListener("click", function(){
     reiniciar()
 });
 
-
-let palabras = Array('cpu','css', 'html', 'javascript', 'python', 'java','http','bootstrap','developer','programa');
+let palabras = Array('cpu','css', 'html', 'javascript', 'python', 'java');      
 let palabraOc = ''; //palabra oculta
 let palabraAdi =''; // palabra que va adivinando
 let letraEquivocada = '';
@@ -24,11 +23,16 @@ var invi5 = document.querySelector('#invi5');
 var invi6 = document.querySelector('#invi6');
 var ganastediv = document.getElementById('ganastediv');
 var cuadrorojo = document.querySelector('#cuadrorojo');
+let num = 0;
+
 
 
 // Elige una palabra y pone los - - - - correspondientes
 function iniciar(){
-    palabraOc = palabras[Math.floor(Math.random()*palabras.length)];
+    if(palabraGuardada.length <= 1){
+    traerPalabras();
+    } 
+    palabraOc = palabraGuardada[Math.floor(Math.random()*palabraGuardada.length)]; //aun no
     console.log('palabraOc= '+ palabraOc);
     for(let i = 0; i < palabraOc.length; i++){    
         palabraAdi +='_ '; 
@@ -36,16 +40,36 @@ function iniciar(){
     document.getElementById('frase').innerHTML = palabraAdi; 
 };
 
+let palabra = '';
+let palabraGuardada = Array();
+
+function traerPalabras(){
+    if(localStorage.length == 0){
+        for(var i = 0; i < palabras.length; i++){
+            let palabra = palabras[i];
+            palabraGuardada.unshift(palabra);
+            localStorage.setItem([i],palabra);
+            }
+        }else{
+            for(var i = 0; i < localStorage.length; i++){
+                let palabra = localStorage.getItem(localStorage.key([i]));
+                palabraGuardada.unshift(palabra);
+            }
+        }
+    return palabraGuardada;
+}
+
+//ejecuta solo al comenzar(crea las palabras)
 iniciar(); 
 
 invi1.classList.remove('invisible');
 document.getElementById('letra').addEventListener('input', comprobar);  
 document.getElementById('letra').focus();
 
-//Comprueba y da devolucion de la letra ingresada
 
+
+//Comprueba y da devolucion de la letra ingresada
 function comprobar(){  
-    
     let letra = document.getElementById('letra').value;
      
     if(validarletras(letra)){ 
@@ -77,11 +101,10 @@ function comprobar(){
     
     mostrarImagenes();
     ganaOpierde(); 
+    }
+    vacioYenfocado();
 }
-vacioYenfocado();
 
-
-}
 function ganaOpierde(){
     if(vidas == 0 ){
         invi5.classList.add('invisible');
