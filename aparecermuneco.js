@@ -2,7 +2,7 @@ function mostrarImagenes(){
     if(vidas == 4){
         invi1.classList.add('invisible');
         invi2.classList.remove('invisible');
-        console.log('vidas == 4');
+        console.log('vidas == 4'); 
     }
     if(vidas == 3){
     
