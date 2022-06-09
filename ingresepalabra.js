@@ -4,7 +4,7 @@ btnc.addEventListener("click",function(){
 });
 
 var palabraRecompuesta = Array();
-var almacenpalabras= Array('http','bootstrap','developer','programa');
+var almacenpalabras= Array('HTTP','BOOTSTRAP','DEVELOPER','PROGRAMA');
 let comprobacion = 0;
 let palabra = '';
 let newAlmacen = almacenpalabras;
@@ -71,7 +71,7 @@ function caracteresMax(input){
 function validarInput (input){
     let numero = /[0123456789]/g; 
     let simbolos = /[°|!"#$%&/()=?'¡]/g;
-    let mayus = /[A-Z]/g;
+    let minus = /[a-z]/g;
     let acentos = /[óáéúí]/g;
     let vacio = '';
     if(input.match(simbolos)){
@@ -92,8 +92,8 @@ function validarInput (input){
         } 
         return false;
     }
-    if(input.match(mayus)){
-        alert("Por favor, no mayusculas");
+    if(input.match(minus)){
+        alert("Por favor, no minusculas");
         vacioYfocus();
         return false;
         }

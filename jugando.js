@@ -7,7 +7,7 @@ btnnj.addEventListener("click", function(){
     reiniciar()
 });
 
-let palabras = Array('cpu','css', 'html', 'javascript', 'python', 'java');      
+let palabras = Array('CPU','CSS', 'HTML', 'JAVASCRIPT', 'PYTHON', 'JAVA');      
 let palabraOc = ''; //palabra oculta
 let palabraAdi =''; // palabra que va adivinando
 let letraEquivocada = '';
