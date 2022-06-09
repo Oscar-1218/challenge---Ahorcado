@@ -3,7 +3,7 @@
 function validarletras (letra){
         
     let simbolos = /[°|!"#$%&/()=?'¡]/g;
-    let minus = /[A-Z]/g;
+    let minus = /[a-z]/g;
     let acentos = /[óáéúí]/g;
     let numero = /[0123456789]/g;    
     let array3 = letraEquivocadaG.concat(letrasAcertadaG);
