@@ -72,7 +72,7 @@ function validarInput (input){
     let numero = /[0123456789]/g; 
     let simbolos = /[°|!"#$%&/()=?'¡]/g;
     let minus = /[a-z]/g;
-    let acentos = /[óáéúí]/g;
+    let acentos = /[óáéúí]/g; 
     let vacio = '';
     if(input.match(simbolos)){
         alert('Por favor, no simbolos');
