@@ -3,7 +3,7 @@
 function validarletras (letra){
         
     let simbolos = /[°|!"#$%&/()=?'¡]/g;
-    let mayus = /[A-Z]/g;
+    let minus = /[A-Z]/g;
     let acentos = /[óáéúí]/g;
     let numero = /[0123456789]/g;    
     let array3 = letraEquivocadaG.concat(letrasAcertadaG);
@@ -22,8 +22,8 @@ function validarletras (letra){
         alert("Por favor, no numeros"); 
         return false;
     }
-    if(letra.match(mayus)){
-        alert("Por favor, no mayusculas");
+    if(letra.match(minus)){
+        alert("Por favor, no minusculas");
         return false;
     }
     if (letra.match(acentos)){
